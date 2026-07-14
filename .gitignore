@@ -1,0 +1,25 @@
+# Per-user traveler preferences — NEVER commit (personal data)
+travel-preferences.local.md
+
+# Per-user key file (never lives in the repo anyway, listed for safety)
+.config/
+
+# Maintainer's private denylist for the secret guard — NEVER commit
+scripts/.no-secrets-denylist.txt
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Node.js (CI tooling / guard scripts only)
+node_modules/
+*.tgz
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

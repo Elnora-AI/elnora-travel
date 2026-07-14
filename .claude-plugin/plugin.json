@@ -1,0 +1,20 @@
+{
+  "name": "travel-planning",
+  "version": "0.1.0",
+  "description": "End-to-end trip planning with live data — flights & hotels via SerpApi (Google Flights/Hotels), Booking.com inventory via RapidAPI (booking-com15), Airbnb stays via the OpenBNB MCP, and routes/places/distances via the Google Routes & Places APIs. Ships a plan-trip skill, a travel-planner sub-agent, and a guided /travel-setup for API keys. Airbnb search works with no key at all; add SERPAPI_API_KEY (250/mo free), GOOGLE_MAPS_API_KEY, and RAPIDAPI_KEY (50/mo free) for the full experience.",
+  "author": {
+    "name": "Elnora AI",
+    "email": "opensource@elnora.ai"
+  },
+  "homepage": "https://github.com/Elnora-AI/elnora-travel",
+  "repository": "https://github.com/Elnora-AI/elnora-travel",
+  "license": "Apache-2.0",
+  "keywords": ["travel", "trip", "flights", "hotels", "airbnb", "booking", "itinerary", "serpapi", "google-maps", "google-flights", "google-hotels"],
+  "mcpServers": {
+    "airbnb": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@openbnb/mcp-server-airbnb@0.1.4", "--ignore-robots-txt"]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  guard:
+    name: Guards (secrets + manifests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+      - run: node scripts/check-no-secrets.mjs
+      - run: node scripts/check-json.mjs
+
+  shell:
+    name: Setup scripts (bash)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Executable bit
+        run: test -x scripts/setup-keys.sh
+      - name: Syntax check
+        run: bash -n scripts/setup-keys.sh
+      - name: shellcheck
+        run: shellcheck scripts/setup-keys.sh
+      - name: Status mode runs clean without any keys
+        run: bash scripts/setup-keys.sh --status
+
+  powershell:
+    name: Setup scripts (PowerShell)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Parse check
+        shell: pwsh
+        run: |
+          $errors = $null
+          [void][System.Management.Automation.Language.Parser]::ParseFile("scripts/setup-keys.ps1", [ref]$null, [ref]$errors)
+          if ($errors) { $errors | ForEach-Object { Write-Error $_.Message }; exit 1 }
+      - name: Status mode runs clean without any keys
+        shell: pwsh
+        run: ./scripts/setup-keys.ps1 -Status

@@ -1,0 +1,22 @@
+{
+  "name": "elnora-travel",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Live-data trip planning for Claude Code — tooling and CI for the travel-planning plugin marketplace.",
+  "license": "Apache-2.0",
+  "author": "Elnora AI <opensource@elnora.ai> (https://github.com/Elnora-AI)",
+  "homepage": "https://github.com/Elnora-AI/elnora-travel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Elnora-AI/elnora-travel.git"
+  },
+  "type": "module",
+  "scripts": {
+    "check:secrets": "node scripts/check-no-secrets.mjs",
+    "check:json": "node scripts/check-json.mjs",
+    "check": "npm run check:secrets && npm run check:json"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
