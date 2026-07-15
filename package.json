@@ -1,6 +1,6 @@
 {
   "name": "elnora-travel",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Live-data trip planning for Claude Code — tooling and CI for the travel-planning plugin marketplace.",
   "license": "Apache-2.0",

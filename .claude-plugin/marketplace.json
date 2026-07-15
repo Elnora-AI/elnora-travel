@@ -11,9 +11,16 @@
       "name": "travel-planning",
       "description": "Plan trips end to end with live data: flights and hotels (SerpApi Google Flights/Hotels), Booking.com inventory (RapidAPI), Airbnb stays (no key needed), and routes/places (Google Maps). A plan-trip skill + travel-planner agent orchestrate everything into one itinerary. Config-driven and universal.",
       "source": "./",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "category": "productivity",
-      "tags": ["travel", "flights", "hotels", "airbnb", "itinerary", "maps"]
+      "tags": [
+        "travel",
+        "flights",
+        "hotels",
+        "airbnb",
+        "itinerary",
+        "maps"
+      ]
     }
   ]
 }
