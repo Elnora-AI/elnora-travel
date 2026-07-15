@@ -74,14 +74,19 @@ See [`INSTALL_FOR_AGENTS.md`](INSTALL_FOR_AGENTS.md) — a gated runbook with ve
 
 ## Part of the Elnora family
 
-elnora-travel is one of a family of universal, config-driven Claude Code tools from [Elnora AI](https://github.com/Elnora-AI). Each tool works 100% standalone; install more than one and they chain naturally:
+Open-source agent tooling from [Elnora AI](https://github.com/Elnora-AI) — free, universal, config-driven tools that wire Claude Code (or any AI coding agent) into the systems you run your company on. Each works 100% standalone; install several and they chain into end-to-end workflows.
 
-- [**knowledge-vault**](https://github.com/Elnora-AI/knowledge-vault) — an Obsidian vault as shared agent memory. **Chains:** file finished itineraries and trip notes into your vault so future planning knows where you've stayed and what worked.
-- [**elnora-google-workspace**](https://github.com/Elnora-AI/elnora-google-workspace) — Gmail, Calendar, Drive as CLI + plugin. **Chains:** drop planned trips straight into your calendar and email itineraries to companions.
-- [**elnora-slack**](https://github.com/Elnora-AI/elnora-slack) — the Slack Web API as an agent-friendly CLI. **Chains:** post trip options to a channel for a group decision before booking.
-- [**elnora-linear**](https://github.com/Elnora-AI/elnora-linear) — Linear issue management. **Chains:** track offsite logistics as issues with the itinerary attached.
-
-Every tool follows the same contract: one-line install, nothing hardcoded, your config drives everything. Browse the whole family on the [Elnora-AI org profile](https://github.com/Elnora-AI).
+<!-- ELNORA-FAMILY:START -->
+- [elnora-linear](https://github.com/Elnora-AI/elnora-linear) — Linear issue management — search, bulk edit, agents, and a config-driven curator
+- [elnora-slack](https://github.com/Elnora-AI/elnora-slack) — the entire Slack Web API as a CLI plus agent skills with a draft-and-approve send gate
+- [elnora-whatsapp](https://github.com/Elnora-AI/elnora-whatsapp) — read, search, and send WhatsApp from your own paired account, 100% local
+- [elnora-google-workspace](https://github.com/Elnora-AI/elnora-google-workspace) — Gmail, Calendar, Drive, Docs, Sheets, Forms, Tasks, plus any Google API via Discovery
+- [elnora-merit-aktiva](https://github.com/Elnora-AI/elnora-merit-aktiva) — Merit Aktiva accounting and Merit Palk payroll as a CLI and plugin
+- [elnora-vanta](https://github.com/Elnora-AI/elnora-vanta) — read-only Vanta compliance — frameworks, tests, controls, and vulnerabilities as agent-friendly JSON
+- [elnora-luma](https://github.com/Elnora-AI/elnora-luma) — Luma (lu.ma) events — all 61 public API endpoints as a spec-driven CLI with safety guardrails
+- [elnora-websearch-tools](https://github.com/Elnora-AI/elnora-websearch-tools) — web search — Exa, Tavily, Perplexity, Firecrawl, and Valyu CLIs and skills in one plugin
+- [knowledge-vault](https://github.com/Elnora-AI/knowledge-vault) — an Obsidian-compatible knowledge base for agent teams — search and save your work to any vault
+<!-- ELNORA-FAMILY:END -->
 
 ## License
 
