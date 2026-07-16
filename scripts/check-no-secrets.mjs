@@ -31,8 +31,14 @@ const TEXT_EXT = new Set([
 ]);
 
 // This guard necessarily contains the patterns it searches for. The gitleaks
-// workflow legitimately carries a 64-hex SHA256 release checksum.
-const SKIP_FILES = new Set(["scripts/check-no-secrets.mjs", ".github/workflows/gitleaks.yml"]);
+// workflow legitimately carries a 64-hex SHA256 release checksum. The
+// release-dispatch workflow is infrastructure (not tool content) and
+// necessarily names the maintainer's internal release orchestrator.
+const SKIP_FILES = new Set([
+  "scripts/check-no-secrets.mjs",
+  ".github/workflows/gitleaks.yml",
+  ".github/workflows/release-dispatch.yml",
+]);
 
 // "elnora" (the maintainer brand) may appear ONLY in these metadata strings.
 // This includes the "Part of the Elnora family" cross-links to sibling public
